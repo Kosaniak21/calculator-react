@@ -1,0 +1,121 @@
+$light-bg-color: #ffffff;
+$light-bg-body: #e2f4fe;
+$dark-bg-color: #414650;
+$dark-bg-body: #242424;
+
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  &.light-theme {
+    background-color: $light-bg-body;
+  }
+
+  &.dark-theme {
+    background-color: $dark-bg-body;
+  }
+}
+
+.theme-toggle-btn {
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  width: 170px;
+  height: 50px;
+  border-radius: 15px;
+  border: none;
+}
+
+body.light-theme .theme-toggle-btn {
+  color: white;
+  background-color: $dark-bg-color;
+}
+
+body.dark-theme .theme-toggle-btn {
+  color: black;
+  background-color: $light-bg-color;
+}
+
+.calculator {
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  border-radius: 20px;
+}
+
+body.light-theme .calculator {
+  background-color: $light-bg-color;
+}
+
+body.dark-theme .calculator {
+  background-color: $dark-bg-color;
+}
+
+.display {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+
+  input {
+    width: 100%;
+    padding: 10px;
+    font-size: 2rem;
+    text-align: right;
+    border: none;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    color: #333;
+    outline: none;
+  }
+}
+
+.button-number {
+  color: #9ea4ab;
+}
+
+.button-calculate {
+  background-color: #0096e7 !important;
+  color: white;
+}
+
+.button-operation {
+  color: #0096e7 !important;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+
+  button {
+    padding: 20px;
+    font-size: 1.5rem;
+    border: none;
+    background-color: transparent;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s ease;
+
+    &:hover {
+      background-color: #e2e2e2;
+      color: black;
+    }
+
+    &.clear {
+      background-color: #ff6347;
+      color: white;
+      grid-column: span 2;
+
+      &:hover {
+        background-color: #ff2a00;
+      }
+    }
+
+    &:active {
+      background-color: #d1d1d1;
+      transform: scale(0.95);
+    }
+  }
+}
