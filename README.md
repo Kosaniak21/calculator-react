@@ -1,12 +1,35 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# React Calculator
 
-Currently, two official plugins are available:
+Simple React Calculator with minimalistic design
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## Expanding the ESLint configuration
+- A minimalistic calculator UI.
+- **Light** and **Dark** theme toggle.
+- Support for keyboard input.
+- Saves the selected theme to **localStorage** so it persists across sessions.
+- Automatically detects system theme (dark or light) on first load.
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Tech Stack
+
+- **React**: A JavaScript library for building user interfaces.
+- **Vite**: A fast and modern build tool for React.
+- **SCSS**: Used for styling the components.
+
+## Installation
+
+Follow these steps to get the project up and running locally:
+
+1.Clone project 
+```
+git clone https://github.com/Kosaniak21/calculator-react.git
+```
+2.Installation 
+```
+npm install
+```
+3.Run the development server:
+```
+npm run dev
+```
